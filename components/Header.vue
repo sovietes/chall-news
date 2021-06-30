@@ -6,8 +6,18 @@
         <p>blog</p>
       </div>
       <form class="input-search">
-        <input type="text" class="search" placeholder="Pesquisar no blog" />
+        <input
+          v-model="contentText"
+          type="text"
+          class="search"
+          placeholder="Pesquisar no blog"
+        />
         <img src="@/assets/img/Vector.svg" alt="Pesquisar vetor" />
+        <ion-icon
+          v-show="haveContent"
+          name="close-outline"
+          @click="clear"
+        ></ion-icon>
       </form>
     </section>
   </header>
@@ -15,7 +25,30 @@
 
 <script lang="ts">
 import Vue from 'vue'
-export default Vue.extend({})
+export default Vue.extend({
+  data() {
+    return {
+      contentText: '',
+      haveContent: false,
+    }
+  },
+
+  watch: {
+    contentText(value) {
+      if (value.length > 0) {
+        this.haveContent = true
+      } else {
+        this.haveContent = false
+      }
+    },
+  },
+
+  methods: {
+    clear() {
+      this.contentText = ''
+    },
+  },
+})
 </script>
 
 <style scoped>
@@ -42,7 +75,7 @@ header {
   border-radius: 5px;
   border: none;
   padding-left: 3.5rem;
-  padding-right: 0.5rem;
+  padding-right: 3.5rem;
   font-size: 1.125rem;
   background: rgba(255, 255, 255, 0.2);
   font-family: 'Inter', sans-serif;
@@ -76,5 +109,18 @@ p {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+ion-icon {
+  color: white;
+  position: absolute;
+  font-size: 24px;
+  right: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.3rem;
+  background: rgba(128, 128, 128, 0.432);
+  border-radius: 5px;
+  cursor: pointer;
 }
 </style>

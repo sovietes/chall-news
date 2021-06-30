@@ -3,7 +3,7 @@ export default {
   head: {
     title: 'chall-code',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'pt-br'
     },
     meta: [
       { charset: 'utf-8' },
@@ -25,6 +25,18 @@ export default {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Lexend+Deca&display=swap'
       }
+    ],
+
+    script: [
+      {
+        type: 'module',
+        src: 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js',
+        body: true
+      },
+      {
+        src: 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js',
+        body: true
+      }
     ]
   },
 
@@ -42,7 +54,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
+    '@nuxt/typescript-build'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -51,5 +63,5 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
 }

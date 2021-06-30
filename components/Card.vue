@@ -2,7 +2,8 @@
   <div class="card">
     <div class="date">
       <p class="date-font">{{ date }}</p>
-      <img src="@/assets/img/heart.svg" alt="" />
+      <!-- <img src="@/assets/img/heart.svg" alt="" /> -->
+      <ion-icon :name="state"  @click="favorite"></ion-icon>
     </div>
     <div class="title">
       <p class="title-font">{{ title }}</p>
@@ -30,6 +31,22 @@ export default Vue.extend({
       required: true,
     },
   },
+
+  data() {
+    return {
+      state: 'heart-outline'
+    }
+  },
+
+  methods: {
+    favorite() {
+      if (this.state === 'heart-outline') {
+        this.state = 'heart'
+      } else {
+        this.state = 'heart-outline'
+      }
+    },
+  },
 })
 </script>
 
@@ -54,6 +71,17 @@ export default Vue.extend({
   margin-bottom: 1rem;
 }
 
+ion-icon {
+  color: #574ae8;
+  font-size: 23px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+ion-icon:hover {
+  transform: scale(1.1, 1.1);
+}
+
 .date-font {
   font-family: 'Lexend Deca';
   color: #b6b6b6;
@@ -74,4 +102,5 @@ export default Vue.extend({
   color: #b6b6b6;
   font-size: 0.88rem;
 }
+
 </style>
