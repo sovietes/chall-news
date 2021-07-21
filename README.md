@@ -1,69 +1,95 @@
-# chall-code
+# News Challenger
 
-## Build Setup
+<img src="./assets/img_readme/img-projeto.png" alt="Imagem do projeto de portal de notícias.">
+
+## 🛠 Tecnologias
+
+- **Front-End**
+  - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+  - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [Vue.js](https://vuejs.org/)
+  - [NuxtJS](https://nuxtjs.org/)
+
+## 📐 Layout
+O layout utilizado foi desenvolvido pelo [Iuri Code](https://github.com/iuricode) e pode ser encontrado no seguinte arquivo do [Figma](https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO/Codel%C3%A2ndia-Desafios?node-id=0%3A1).
+
+## 💡 Ajustes e melhorias
+
+O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
+
+- [ ] Adicionar função para criação de novas notícias.
+
+## 💻 Pré-requisitos
+
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
+<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
+* Você instalou a versão mais recente do [Node.js](https://nodejs.org/en/).
+* Você instalou a versão mais recente do [Git](https://git-scm.com/).
+
+## ⬇ Instalando o News Challenger
+
+Para instalar o News Challenger, siga estas etapas:
 
 ```bash
-# install dependencies
+# Faça o download do projeto para sua máquina, pelo próprio github ou através do terminal utilizando:
+$ git clone https://github.com/sovietes/chall-news.git
+
+# Acesse o projeto, no caso do projeto, utilizando:
+$ cd chall-news
+
+# Instale as depedências do Node.js
 $ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## ☕ Usando o News Challenger
 
-## Special Directories
+Para usar o News Challenger, siga estas etapas:
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+```bash
+# Rode o servidor local através do comando:
+$ npm run dev
 
-### `assets`
+# Em seguinda acesse o servidor local através do seu navegador, na porta "especificada" pelo output do terminal.
+```
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+## 📂 Estrutura do diretório
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+```
+|-- assets/
+  |-- css/
+  |-- img/
+  |-- img_readme/
+|-- components/
+|-- pages/
+|-- .gitignore
+|-- LICENSE.md
+|-- nuxt.config.js
+|-- package-lock.json
+|-- package.json
+|-- README.md
+|-- tsconfig.json
+```
 
-### `components`
+## 🤝 Colaboradores
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+Agradeceço às seguintes pessoas que contribuíram para este projeto:
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <sub>
+          <b>Iuri Silva</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
-### `layouts`
+## 📝 Licença
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+Esse projeto está sob licença MIT. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+[⬆ Voltar ao topo](#chall-news)<br>
