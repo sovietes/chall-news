@@ -1,6 +1,6 @@
 <template>
   <section class="posts">
-    <div v-for="post in posts" :key="post.title">
+    <div v-for="post in posts" :key="post.title" v-scroll-reveal>
       <Card :date="post.date" :title="post.title" :content="post.content" />
     </div>
   </section>
@@ -8,6 +8,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+
 export default Vue.extend({
   data() {
     return {
